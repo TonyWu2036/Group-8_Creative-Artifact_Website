@@ -158,44 +158,31 @@
   text-shadow: 0 0 12px rgba(196, 181, 253, 0.3);
 }
 
-
+/* APA style list, no numbering */
 .ref-list {
-  counter-reset: ref-counter;
-  padding-left: 0;
   list-style: none;
+  padding-left: 0;
 }
 
 
 .ref-list li {
-  counter-increment: ref-counter;
-  margin-bottom: 16px;
   font-size: 15px;
   line-height: 1.7;
   color: #d1d5db;
-
-
-  text-indent: -22px;  
+  
+  /* APA standard hanging indent */
+  text-indent: -22px;
   padding-left: 36px;
 
+  margin-bottom: 16px;
   padding-top: 10px;
   padding-bottom: 10px;
+
   border-radius: 8px;
   transition: all 0.25s ease;
-  position: relative;
 }
 
-
-.ref-list li::before {
-  content: counter(ref-counter) ". ";
-  position: absolute;
-  left: 0;
-  top: 10px;
-  font-size: 15px;
-  color: #9ca3af;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
-
-
+/* Hover animation */
 .ref-list li:hover {
   background: rgba(124, 58, 237, 0.12);
   color: #f3f4f6;
@@ -203,10 +190,6 @@
   transform: translateX(4px);
 }
 
-.ref-list li:hover::before {
-  color: #c084fc;
-  transform: translateX(3px);
-}
 
 
 
@@ -333,8 +316,7 @@
 <section class="references">
   <h2 class="ref-title">References</h2>
 
-  
-  <ol class="ref-list">
+  <ul class="ref-list">
     <li>
       Amabile, T. M., & Pratt, M. G. (2016). <em>The influence of intrinsic motivation and synergistic extrinsic motivators on creativity and innovation</em>. Journal of Applied Psychology, 101(8), 1189–1200.
     </li>
@@ -366,9 +348,8 @@
     <li>
       Zhou, J., & George, J. M. (2001). <em>When job dissatisfaction leads to creativity: Encouraging the expression of voice</em>. Academy of Management Journal, 44(4), 682–696.
     </li>
-  </ol>
+  </ul>
 </section>
-
 
 
     <footer class="footer">
